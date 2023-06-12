@@ -1,0 +1,1050 @@
+{
+  "installerTitle": "Thingsee Toolbox",
+  "@installerTitle": {
+    "description": "Application title"
+  },
+  "removeStack": "Remove stack?",
+  "@removeStack": {
+    "description": "Dialog text"
+  },
+  "remove": "Remove",
+  "@remove": {
+    "description": "Remove text"
+  },
+  "cancel": "Cancel",
+  "@cancel": {
+    "description": "Cancel text"
+  },
+  "areYouSureYouWantToDeleteStack": "Are you sure you want to remove the stack from your account? The stack will remain available in the system.",
+  "@areYouSureYouWantToDeleteStack": {
+    "description": "Delete stack dialog text"
+  },
+  "clientID": "Client ID: {id}",
+  "@clientID": {
+    "description": "Stack's client ID",
+    "placeholders": {
+      "id": {
+        "type": "String"
+      }
+    }
+  },
+  "path": "Path: {path}",
+  "@path": {
+    "description": "Stack's path",
+    "placeholders": {
+      "path": {
+        "type": "String"
+      }
+    }
+  },
+  "ok": "OK",
+  "@ok": {
+    "description": "OK text"
+  },
+  "info": "Info",
+  "@info": {
+    "description": "Info text"
+  },
+  "addNewStack": "Add a new stack",
+  "@addNewStack": {
+    "description": "Add new stack text"
+  },
+  "stackAddedSuccessfully": "Stack added successfully",
+  "@stackAddedSuccessfully": {
+    "description": "Snackbar text"
+  },
+  "stackDeletedSuccessfully": "Stack deleted successfully",
+  "@stackDeletedSuccessfully": {
+    "description": "Snackbar text"
+  },
+  "youHaveNotTakenStacksToUse": "You have not taken any\nThingsee stacks into use.",
+  "@youHaveNotTakenStacksToUse": {
+    "description": "Stacks empty text"
+  },
+  "noResults": "No results",
+  "@noResults": {
+    "description": "No results text"
+  },
+  "filter": "Filter",
+  "@filter": {
+    "description": "Filter text"
+  },
+  "errorOccured": "An Error occurred",
+  "@errorOccured": {
+    "description": "Error text"
+  },
+  "error": "Error: ",
+  "@error": {
+    "description": "Error text"
+  },
+  "problemConnectingToServers": "Problem connecting to the server",
+  "@problemConnectingToServers": {
+    "description": "Error text"
+  },
+  "somethingWentWrong": "Something went wrong",
+  "@somethingWentWrong": {
+    "description": "Error text"
+  },
+  "edit": "Edit",
+  "@edit": {
+    "description": "Edit text"
+  },
+  "envProduction": "pr - Production",
+  "@envProduction": {
+    "description": "Environment text"
+  },
+  "envDevelopment": "rd - Development",
+  "@envDevelopment": {
+    "description": "Environment text"
+  },
+  "envDemo": "dm - Demo",
+  "@envDemo": {
+    "description": "Environment text"
+  },
+  "envUnassigned": "un - Unassigned",
+  "@envUnassigned": {
+    "description": "Environment text"
+  },
+  "environment": "Environment",
+  "@environment": {
+    "description": "Environment text"
+  },
+  "selectEnvironment": "Select environment",
+  "@selectEnvironment": {
+    "description": "Select environment text"
+  },
+  "country": "Country",
+  "@country": {
+    "description": "Country text"
+  },
+  "selectCountry": "Select country",
+  "@selectCountry": {
+    "description": "Country text"
+  },
+  "search": "Search",
+  "@search": {
+    "description": "Search text"
+  },
+  "name": "Name",
+  "@name": {
+    "description": "Name text"
+  },
+  "enterGroupName": "Enter group name",
+  "@enterGroupName": {
+    "description": "Enter group name text"
+  },
+  "description": "Description",
+  "@description": {
+    "description": "Description text"
+  },
+  "enterGroupDescription": "Enter group description",
+  "@enterGroupDescription": {
+    "description": "Enter group description text"
+  },
+  "environmentNameWillBe": "The name of the deployment group will be",
+  "@environmentNameWillBe": {
+    "description": "Group adding info text"
+  },
+  "addGroup": "Add group",
+  "@addGroup": {
+    "description": "Add group text"
+  },
+  "addNewDeploymentGroup": "Add new deployment group",
+  "@addNewDeploymentGroup": {
+    "description": "Add group text"
+  },
+  "groupCreatedSuccessfully": "Group created successfully",
+  "@groupCreatedSuccessfully": {
+    "description": "Add group text"
+  },
+  "groupDeletedSuccessfully": "Group deleted successfully",
+  "@groupDeletedSuccessfully": {
+    "description": "Delete group text"
+  },
+  "areYouSureYouWantToDeleteGroup": "Are you sure you want to remove the deployment group? All devices assigned to this group will be moved to “Unassigned”.",
+  "@areYouSureYouWantToDeleteGroup": {
+    "description": "Delete group text"
+  },
+  "removeDeploymentGroup": "Remove deployment group?",
+  "@removeDeploymentGroup": {
+    "description": "Delete group text"
+  },
+  "thereAreNoDeploymentGroups": "There are no deployment\ngroups in this stack.",
+  "@thereAreNoDeploymentGroups": {
+    "description": "Groups empty text"
+  },
+  "addNewGroup": "Add new stack",
+  "@addNewGroup": {
+    "description": "Add groups text"
+  },
+  "thereAreNoDevices": "There are no devices in this deployment group.",
+  "@thereAreNoDevices": {
+    "description": "Devices empty text"
+  },
+  "addNewDevice": "Add new device",
+  "@addNewDevice": {
+    "description": "Add device text"
+  },
+  "deviceInfo": "Device info",
+  "@deviceInfo": {
+    "description": "Device info text"
+  },
+  "welcomeToThingseeInstaller": "Welcome to Thingsee Toolbox!\n\nStart by entering the details of the Thingsee stack you are going to use.",
+  "@welcomeToThingseeInstaller": {
+    "description": "First time open dialog text"
+  },
+  "editDeploymentGroup": "Edit deployment group",
+  "@editDeploymentGroup": {
+    "description": "Edit deployment group text"
+  },
+  "saveChanges": "Save changes",
+  "@saveChanges": {
+    "description": "Save changes text"
+  },
+  "editDevice": "Edit device",
+  "@editDevice": {
+    "description": "Edit device text"
+  },
+  "tuid": "TUID",
+  "@tuid": {
+    "description": "TUID text"
+  },
+  "installed": "Installed",
+  "@installed": {
+    "description": "Installation status text"
+  },
+  "newInstallation": "New",
+  "@newInstallation": {
+    "description": "Installation status text"
+  },
+  "quarantine": "Quarantine",
+  "@quarantine": {
+    "description": "Installation status text"
+  },
+  "retired": "Retired",
+  "@retired": {
+    "description": "Installation status text"
+  },
+  "uninstalled": "Uninstalled",
+  "@uninstalled": {
+    "description": "Installation status text"
+  },
+  "installationStatus": "Installation status",
+  "@installationStatus": {
+    "description": "Installation status text"
+  },
+  "visitorCounter": "Visitor counter",
+  "@visitorCounter": {
+    "description": "Presence operating mode text"
+  },
+  "occupancy": "Occupancy",
+  "@occupancy": {
+    "description": "Presence operating mode text"
+  },
+  "eventBased": "Event-based",
+  "@eventBased": {
+    "description": "Presence operating mode text"
+  },
+  "locationIn": "In",
+  "@locationIn": {
+    "description": "Installation location text"
+  },
+  "locationOut": "Out",
+  "@locationOut": {
+    "description": "Installation location text"
+  },
+  "defaultMode": "Default",
+  "@defaultMode": {
+    "description": "Environment operating mode text"
+  },
+  "fixedInterval": "Fixed interval",
+  "@fixedInterval": {
+    "description": "Configuration text"
+  },
+  "operatingMode": "Operating mode",
+  "@operatingMode": {
+    "description": "Environment operating mode text"
+  },
+  "disabled": "Disabled",
+  "@disabled": {
+    "description": "Configuration text"
+  },
+  "save": "Save",
+  "@save": {
+    "description": "Save text"
+  },
+  "orientation": "Orientation",
+  "@orientation": {
+    "description": "Save text"
+  },
+  "mumModeAccelerometer": "MUM mode{newline}(accelerometer)",
+  "@mumModeAccelerometer": {
+    "description": "MUM mode text",
+    "placeholders": {
+      "newline": {
+        "type": "String"
+      }
+    }
+  },
+  "installationLocation": "Installation location",
+  "@installationLocation": {
+    "description": "Configuration text"
+  },
+  "deploymentGroup": "Deployment group",
+  "@deploymentGroup": {
+    "description": "Configuration text"
+  },
+  "replaceDevice": "Replace device",
+  "@replaceDevice": {
+    "description": "Replace device text"
+  },
+  "readQrCode": "Read QR-code",
+  "@readQrCode": {
+    "description": "Device add hint text"
+  },
+  "hallModeMagneticSensor": "Hall mode{newline}(magnetic{newline}sensor)",
+  "@hallModeMagneticSensor": {
+    "description": "Configuration text",
+    "placeholders": {
+      "newline": {
+        "type": "String"
+      }
+    }
+  },
+  "replace": "Replace",
+  "@replace": {
+    "description": "Replace text"
+  },
+  "deviceAddedSuccessfully": "Device added successfully",
+  "@deviceAddedSuccessfully": {
+    "description": "Add new device snackbar text"
+  },
+  "deviceDeletedSuccessfully": "Device deleted successfully",
+  "@deviceDeletedSuccessfully": {
+    "description": "Delete device snackbar text"
+  },
+  "sameDevice": " Same device. Please read the QR code from the device that replaces the current one.",
+  "@sameDevice": {
+    "description": "QR text"
+  },
+  "unknownQRcode": "Unknown QR code! \nPlease make sure that only one code is being read at a time",
+  "@unknownQRcode": {
+    "description": "QR text"
+  },
+  "cameraPermissionNotGranted": "You didn't provide permission to access the camera.",
+  "@cameraPermissionNotGranted": {
+    "description": "QR text"
+  },
+  "areYouSureYouWantToDeleteDevice": "Are you sure you want to remove the device? It will be moved to “Unassigned”",
+  "@areYouSureYouWantToDeleteDevice": {
+    "description": "Delete device text"
+  },
+  "removeDevice": "Remove device",
+  "@removeDevice": {
+    "description": "Delete device text"
+  },
+  "deviceReplacedSuccessfully": "Device replaced successfully",
+  "@deviceReplacedSuccessfully": {
+    "description": "Delete device text"
+  },
+  "originalDevice": "Original device",
+  "@originalDevice": {
+    "description": "Replace device text"
+  },
+  "replaceWith": "Replace with",
+  "@replaceWith": {
+    "description": "Replace device text"
+  },
+  "deviceStatus": "Device status",
+  "@deviceStatus": {
+    "description": "Device Status text"
+  },
+  "online": "Online",
+  "@online": {
+    "description": "Online text"
+  },
+  "offlineLastSeen": "Offline, last seen: {offline}",
+  "@offlineLastSeen": {
+    "description": "Device Offline text",
+    "placeholders": {
+      "offline": {
+        "type": "String"
+      }
+    }
+  },
+  "batteryLevel": "Battery level",
+  "@batteryLevel": {
+    "description": "Battery level text"
+  },
+  "deviceEvents": "Events",
+  "@deviceEvents": {
+    "description": "Device Events text"
+  },
+  "deviceUpdated": "Device information updated successfully",
+  "@deviceUpdated": {
+    "description": "Edit device text"
+  },
+  "vibration": "Vibration: {activityLevel} Energy: {energyLevel}",
+  "@vibration": {
+    "description": "Vibration message text",
+    "placeholders": {
+      "activityLevel": {
+        "type": "num?"
+      },
+      "energyLevel": {
+        "type": "num?"
+      }
+    }
+  },
+  "accConfig": "Accelerometer sensor configuration",
+  "@accCondfig": {
+    "description": "Accelerometer sensor configuration message text"
+  },
+  "systemInfo": "Thing system information data",
+  "@systemInfo": {
+    "description": "system info message text"
+  },
+  "infoRequest": "Thing information request",
+  "@infoRequest": {
+    "description": "Thing information request message text"
+  },
+  "infoRequestUnv": "Thing information unavailable",
+  "@infoRequestUnv": {
+    "description": "Thing information request message text"
+  },
+  "weatherInfoAirp": "Air pressure: {airp} hPa ",
+  "@weatherInfoAirp": {
+    "description": "Weather info message text",
+    "placeholders": {
+      "airp": {
+        "type": "String"
+      }
+    }
+  },
+  "weatherInfoHumd": "Humidity: {humd}% ",
+  "@weatherInfoHumd": {
+    "description": "Weather info message text",
+    "placeholders": {
+      "humd": {
+        "type": "num?"
+      }
+    }
+  },
+  "weatherInfoTemp": "Temperature: {temp}°C ",
+  "@weatherInfoTemp": {
+    "description": "Weather info message text",
+    "placeholders": {
+      "temp": {
+        "type": "num?"
+      }
+    }
+  },
+  "weatherInfoLght": "Light: {lght} lux ",
+  "@weatherInfoLght": {
+    "description": "Weather info message text",
+    "placeholders": {
+      "lght": {
+        "type": "num?"
+      }
+    }
+  },
+  "magnetoInfo": "Hall: {hall} Hall count: {hallCount}",
+  "@magnetoInfo": {
+    "description": "Magneto switch text",
+    "placeholders": {
+      "hall": {
+        "type": "num?"
+      },
+      "hallCount": {
+        "type": "num?"
+      }
+    }
+  },
+  "leakageResistance": "Leakage resistance: {res}",
+  "@leakageResistance": {
+    "description": "Leakage resistance data message text",
+    "placeholders": {
+      "res": {
+        "type": "num?"
+      }
+    }
+  },
+  "sensorConfig": "Sensor configuration message: {tsmId}",
+  "@sensorConfig": {
+    "description": "Sensor configuration message text",
+    "placeholders": {
+      "tsmId": {
+        "type": "int"
+      }
+    }
+  },
+  "batteryInfo": "Battery message",
+  "@batteryInfo": {
+    "description": "Battery info text"
+  },
+  "ping": "Ping",
+  "@ping": {
+    "description": "Ping message text"
+  },
+  "moveCount": "Move count: {moveCount}",
+  "@moveCount": {
+    "description": "Move count message text",
+    "placeholders": {
+      "moveCount": {
+        "type": "num?"
+      }
+    }
+  },
+  "count": "Count: {count}",
+  "@count": {
+    "description": "Count message text",
+    "placeholders": {
+      "count": {
+        "type": "num?"
+      }
+    }
+  },
+  "heartbeat": "Heartbeat",
+  "@heartbeat": {
+    "description": "Heartbeat message text"
+  },
+  "gatewayMessage": "Gateway message: {gatewayMessage}",
+  "@gatewayMessage": {
+    "description": "Gateway message text",
+    "placeholders": {
+      "gatewayMessage": {
+        "type": "String"
+      }
+    }
+  },
+  "edgeCoreChange": "Edge core state change",
+  "@edgeCoreChange": {
+    "description": "Edge core state message text"
+  },
+  "edgeCoreStats": "Edge core stats diagnostics data event request",
+  "@edgeCoreStats": {
+    "description": "Edge core stats message text"
+  },
+  "edgeCoreBinary": "Edge core binary event",
+  "@edgeCoreBinary": {
+    "description": "Edge core binary message text"
+  },
+  "jamDetection": "Jam detection message",
+  "@jamDetection": {
+    "description": "Jam detection message text"
+  },
+  "angle": "Angle: {angle}°",
+  "@angle": {
+    "description": "Angle message text",
+    "placeholders": {
+      "angle": {
+        "type": "num?"
+      }
+    }
+  },
+  "temperature": "Temperature: {temperature}°C",
+  "@temperature": {
+    "description": "Temperature message text",
+    "placeholders": {
+      "temperature": {
+        "type": "num?"
+      }
+    }
+  },
+  "distance": "Distance: {dist} mm",
+  "@distance": {
+    "description": "Distance message text",
+    "placeholders": {
+      "dist": {
+        "type": "num?"
+      }
+    }
+  },
+  "beamInfo": "Distance: {dist} mm",
+  "@beamInfo": {
+    "description": "Beam information message text",
+    "placeholders": {
+      "dist": {
+        "type": "num?"
+      }
+    }
+  },
+  "beam2d": "Beam 2D area information",
+  "@beam2d": {
+    "description": "Beam 2D area message text"
+  },
+  "ledControl": "LED control request",
+  "@ledControl": {
+    "description": "LED control message text"
+  },
+  "devices": "Devices",
+  "@devices": {
+    "description": "Bottomnavigation item text"
+  },
+  "logs": "Logs",
+  "@logs": {
+    "description": "Bottomnavigation item text"
+  },
+  "more": "More",
+  "@more": {
+    "description": "Bottomnavigation item text"
+  },
+  "noBattery": "No battery data available",
+  "@noBattery": {
+    "description": "no battery item text"
+  },
+  "neighbouringData": "Sensor network neighbouring data\nRSSI:{rssi}",
+  "@neighbouringData": {
+    "description": "Sensor network neighbouring data text",
+    "placeholders": {
+      "rssi": {
+        "type": "num?"
+      }
+    }
+  },
+  "help": "Help",
+  "@help": {
+    "description": "help"
+  },
+  "goToHelp": "Go to Haltian support center",
+  "@GotoHelp": {
+    "description": "Go to support page text"
+  },
+  "licenses": "Licenses",
+  "@licenses": {
+    "description": "Licenses page text"
+  },
+  "export": "Export csv",
+  "@export": {
+    "description": "Log events text"
+  },
+  "stopRecording": "Stop recording",
+  "@stopRecording": {
+    "description": "Log events text"
+  },
+  "startRecording": "Start recording",
+  "@startRecording": {
+    "description": "Log events text"
+  },
+  "deleteLogFile": "Delete log file?",
+  "@deleteLogFile": {
+    "description": "Log events text"
+  },
+  "areYouSureDeleteLogFile": "Are you sure you want to remove the log file?",
+  "@areYouSureDeleteLogFile": {
+    "description": "Log events text"
+  },
+  "recordingOn": "Recording on",
+  "@recordingOn": {
+    "description": "Log events text"
+  },
+  "recordingOff": "Recording off",
+  "@recordingOff": {
+    "description": "Log events text"
+  },
+  "logFileDeleted": "Log file deleted",
+  "@logFileDeleted": {
+    "description": "Log events text"
+  },
+  "noEventsInThisLogFile": "No events in this log file",
+  "@noEventsInThisLogFile": {
+    "description": "Log events text"
+  },
+  "addingADevice": "Adding a device",
+  "@addingADevice": {
+    "description": "Log events text"
+  },
+  "replacingADevice": "Replacing a device",
+  "@replacingADevice": {
+    "description": "Log events text"
+  },
+  "editingADevice": "Editing a device",
+  "@editingADevice": {
+    "description": "Log events text"
+  },
+  "removingADevice": "Removing a device",
+  "@removingADevice": {
+    "description": "Log events text"
+  },
+  "deviceAdded": "Device added",
+  "@deviceAdded": {
+    "description": "Log events text"
+  },
+  "deviceReplaced": "Device replaced",
+  "@deviceReplaced": {
+    "description": "Log events text"
+  },
+  "deviceEdited": "Device edited",
+  "@deviceEdited": {
+    "description": "Log events text"
+  },
+  "deviceRemoved": "Device removed",
+  "@deviceRemoved": {
+    "description": "Log events text"
+  },
+  "title": "Title",
+  "@title": {
+    "description": "Log events text"
+  },
+  "enterTitle": "Enter title",
+  "@enterTitle": {
+    "description": "Log events text"
+  },
+  "enterDescription": "Enter description",
+  "@enterDescription": {
+    "description": "Log events text"
+  },
+  "eventsIncludedInTheLog": "Events included in the log:",
+  "@eventsIncludedInTheLog": {
+    "description": "Log events text"
+  },
+  "addNewLogFile": "Add new log file",
+  "@addNewLogFile": {
+    "description": "Log events text"
+  },
+  "editLogFile": "Edit log file",
+  "@editLogFile": {
+    "description": "Log events text"
+  },
+  "addLog": "Add log",
+  "@addLog": {
+    "description": "Log events text"
+  },
+  "deleteLogEntry": "Delete log entry",
+  "@deleteLogEntry": {
+    "description": "Log events delete button text"
+  },
+  "goToLicenses": "Used by this application",
+  "@goToLicenses": {
+    "description": "Used by this application  text"
+  },
+  "version": "Version: {version}",
+  "@version": {
+    "description": "version text",
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "copyright": "Copyright {year} Haltian",
+  "@copyright": {
+    "description": "copyright text",
+    "placeholders": {
+      "year": {
+        "type": "String"
+      }
+    }
+  },
+  "removeLogEntry": "Remove log entry?",
+  "@removeLogEntry": {
+    "description": "Delete log event text"
+  },
+  "areYouSureDeleteLogEntry": "Are you sure you want to remove this log entry?",
+  "@areYouSureDeleteLogEntry": {
+    "description": "Delete log event text"
+  },
+  "device": "Device",
+  "@device": {
+    "description": "Log event text"
+  },
+  "note": "Note",
+  "@note": {
+    "description": "Log event text"
+  },
+  "oldDevice": "Old device",
+  "@oldDevice": {
+    "description": "Log event text"
+  },
+  "installationNotes": "Installation notes",
+  "@installationNotes": {
+    "description": "Installation notes text"
+  },
+  "logEntryDeleted": "Log entry deleted",
+  "@logEntryDeleted": {
+    "description": "Log event text"
+  },
+  "thisNoteIsStoredInYourDevice": "This note is stored in your device and will only be shown in the log.",
+  "@thisNoteIsStoredInYourDevice": {
+    "description": "Logging text"
+  },
+  "newDevice": "New device",
+  "@newDevice": {
+    "description": "Logging event text"
+  },
+  "offline": "Offline",
+  "@offline": {
+    "description": "Logging event text"
+  },
+  "carbonInfo": "CO2: {carbonDioxide} ppm",
+  "@carbonInfo": {
+    "description": "Airquality event text",
+    "placeholders": {
+      "carbonDioxide": {
+        "type": "num?"
+      }
+    }
+  },
+  "tvocInfo": "TVOC: {tvoc} ppm",
+  "@tvocInfo": {
+    "description": "Airquality event text",
+    "placeholders": {
+      "tvoc": {
+        "type": "num?"
+      }
+    }
+  },
+  "carbonConfig": "Carbon Dioxide configure",
+  "@carbonConfig": {
+    "description": "Airquality event text"
+  },
+  "carbonManual": "Carbon Dioxide manual calibrate",
+  "@carbonManual": {
+    "description": "Airquality event text"
+  },
+  "tvocConfig": "TVOC configure",
+  "@tvocConfig": {
+    "description": "Airquality event text"
+  },
+  "carbonHardware": "Carbon Dioxide read hardware component versions",
+  "@carbonHardware": {
+    "description": "Airquality event text"
+  },
+  "tvocReset": "TVOC Reset",
+  "@tvocReset": {
+    "description": "Airquality event text"
+  },
+  "countInOut": "In: {countIn} Out: {out}",
+  "@countInOut": {
+    "description": "Airquality event text",
+    "placeholders": {
+      "countIn": {
+        "type": "int?"
+      },
+      "out": {
+        "type": "int?"
+      }
+    }
+  },
+  "group": "Group",
+  "@group": {
+    "description": "Log event detail text"
+  },
+  "noLogsAdded": "No logs added",
+  "@noLogsAdded": {
+    "description": "Logs text"
+  },
+  "enterTuid": "Enter TUID",
+  "@enterTuid": {
+    "description": "Enter tuid text in search page"
+  },
+  "batl": "Battery Level: {batl} %",
+  "@batl": {
+    "description": "Battery level message",
+    "placeholders": {
+      "batl": {
+        "type": "int?"
+      }
+    }
+  },
+  "orientationMsg": "Orientation - x: {accx} - y: {accy} - z: {accz}",
+  "@orientationMsg": {
+    "description": "Save text",
+    "placeholders": {
+      "accx": {
+        "type": "num?"
+      },
+      "accy": {
+        "type": "num?"
+      },
+      "accz": {
+        "type": "num?"
+      }
+    }
+  },
+  "celluralRfDataRat": "Rat: {cellRat} ",
+  "@celluralRfDataRat": {
+    "description": "Cellular info text",
+    "placeholders": {
+      "cellRat": {
+        "type": "String?"
+      }
+    }
+  },
+  "celluralRfDataRssi": "RSSI: {cellRssi} ",
+  "@celluralRfDataRssi": {
+    "description": "Cellular info text",
+    "placeholders": {
+      "cellRssi": {
+        "type": "num?"
+      }
+    }
+  },
+  "cellularInfoMccMnc": "MccMnc: {cellMccMnc} ",
+  "@cellularInfoMccMnc": {
+    "description": "Cellular info text",
+    "placeholders": {
+      "cellMccMnc": {
+        "type": "String?"
+      }
+    }
+  },
+  "cellularInfoOperator": "Operator: {operatorName} ",
+  "@cellularInfoOperator": {
+    "description": "Cellular info text",
+    "placeholders": {
+      "operatorName": {
+        "type": "String?"
+      }
+    }
+  },
+  "systemMessage": "System message: {msgId}",
+  "@systemMessage": {
+    "description": "system Message detail text",
+    "placeholders": {
+      "msgId": {
+        "type": "int"
+      }
+    }
+  },
+  "occupancyMode": "State: {state}",
+  "@occupancyMode": {
+    "description": "Presence operating mode text",
+    "placeholders": {
+      "state": {
+        "type": "num?"
+      }
+    }
+  },
+  "exportingCsvFailed": "Exporting CSV failed",
+  "@exportingCsvFailed": {
+    "description": "CSV error text"
+  },
+  "csvSavedToDownloadsFolder": "CSV saved in the 'Downloads'-folder",
+  "@csvSavedToDownloadsFolder": {
+    "description": "CSV error text"
+  },
+  "csvSaved": "CSV saved",
+  "@csvSaved": {
+    "description": "CSV saving text"
+  },
+  "enterTuidOrReadQR": "Enter TUID or read QR code",
+  "@enterTuidOrReadQR": {
+    "description": "Search device text"
+  },
+  "firmwareVersion": "Firmware version",
+  "@firmwareVersion": {
+    "description": "firmware version box device text"
+  },
+  "logFileUpdated": "Log file updated",
+  "@logFileUpdated": {
+    "description": "logfile updated text"
+  },
+  "deviceNotFound": "Device not found in the active stack",
+  "@deviceNotFound": {
+    "description": "Search device error text"
+  },
+  "networkDisconnected": "Network disconnected",
+  "@networkDisconnected": {
+    "description": "networkDisconnected  text"
+  },
+  "networkConnected": "Network connected",
+  "@networkConnected": {
+    "description": "network Connected  text"
+  },
+  "powerCoverMessage": "Power cover information\nUSB-Power: {usbpwr}",
+  "@powerCoverMessage": {
+    "description": "network Connected  text",
+    "placeholders": {
+      "usbpwr": {
+        "type": "String"
+      }
+    }
+  },
+  "wirepassNode": "Wirepas node message",
+  "@wirepassNode": {
+    "description": "network Connected  text"
+  },
+  "usbPowered": "USB-powered",
+  "@usbPowered": {
+    "description": "network Connected  text"
+  },
+  "never": "Never",
+  "@never": {
+    "description": "never online  text"
+  },
+  "yes": "Yes",
+  "@yes": {
+    "description": "yes text"
+  },
+  "no": "No",
+  "@no": {
+    "description": "No text"
+  },
+  "celluralRfDataRsrp": "RSRP: {cellRsrp} ",
+  "@celluralRfDataRsrp": {
+    "description": "Cellular info text",
+    "placeholders": {
+      "cellRsrp": {
+        "type": "num?"
+      }
+    }
+  },
+  "addingStackFailed": "Adding stack failed",
+  "@addingStackFailed": {
+    "description": "Adding stack failure text"
+  },
+  "stackAlreadyExists": "Stack already exists",
+  "@stackAlreadyExists": {
+    "description": "Adding stack failure text"
+  },
+  "clientDetails": "Client details",
+  "@clientDetails": {
+    "description": "Client details text"
+  },
+  "secret": "Secret",
+  "@secret": {
+    "description": "Secret text"
+  },
+  "pathTitle": "Path",
+  "@pathTitle": {
+    "description": "Path text"
+  },
+  "acceloremeter": "MUM mode",
+  "@acceloremeter": {
+    "description": "Path text"
+  },
+  "hallMode": "Hall mode",
+  "@hallMode": {
+    "description": "Path text"
+  },
+  "selectGroup": "Select group",
+  "@selectGroup": {
+    "description": "Select group text"
+  },
+  "thingseeStack": "Thingsee stack",
+  "@thignseeSTack": {
+    "description": "Stack description text"
+  },
+  "replacementDeviceCantBeDifferentType": "The replacement device cannot be a different device type",
+  "@replacementDeviceCantBeDifferentType": {
+    "description": "Replace device error text"
+  },
+  "enabled": "Enabled",
+  "@enabled":{
+    "description": "Mode is enabled"
+  },
+  "amountIn": "Inside: {amountIn}",
+  "@amountIn": {
+    "description": "amount in message",
+    "placeholders": {
+      "amountIn": {
+        "type": "num?"
+      }
+    }
+  },
+  "testMode": "Test mode, please update device's configuration",
+  "@testMode": {
+    "description": "Occupancy testmode message"
+  }
+}
