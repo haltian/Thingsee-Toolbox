@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:thingsee_installer/logic/commands/cubit/commands_state.dart';
 import 'package:thingsee_installer/logic/installer_user_repository.dart';
 import 'package:thingsee_installer/logic/send_command_backend.dart';
+import 'package:thingsee_installer/protocol/commands_response.dart';
 import 'package:thingsee_installer/protocol/device_command.dart';
 import '../../../installer_error_model.dart';
 import '../../../protocol/error_message.dart';
@@ -23,7 +24,7 @@ class CommandsCubit extends Cubit<CommandsState> {
       required List<DeviceCommand> commands}) async {
     emit(const CommandInProgress(true));
     try {
-      var updatedCommands;
+      List<DeviceCommand> updatedCommands;
       String? token;
       token = await InstallerUserRepository().getToken();
       if (token == null) {
@@ -84,7 +85,7 @@ class CommandsCubit extends Cubit<CommandsState> {
       required int limit}) async {
     emit(const CommandInProgress(false));
     try {
-      var allCommands;
+      List<CommandsResponse> allCommands;
       String? token;
       token = await InstallerUserRepository().getToken();
       if (token == null) {

@@ -94,13 +94,13 @@ class _DeviceListViewState extends State<DeviceListView> {
 
   Future<void> _pullToRefresh() {
     _fetchDeviceList();
-    return Future.delayed(Duration(seconds: 0), () {});
+    return Future.delayed(const Duration(seconds: 0), () {});
   }
 
-  List<Widget> _devicesGroupedList(List<String> _deviceIDs) {
+  List<Widget> _devicesGroupedList(List<String> deviceIDs) {
     final List<Widget> items = [];
 
-    final filteredDevices = _deviceIDs
+    final filteredDevices = deviceIDs
         .where((element) =>
             element.toLowerCase().contains(_filterText.toLowerCase()) ||
             deviceModel
@@ -110,7 +110,7 @@ class _DeviceListViewState extends State<DeviceListView> {
         .toList();
 
     items.add(Visibility(
-      visible: (_deviceIDs.isNotEmpty),
+      visible: (deviceIDs.isNotEmpty),
       child: InstallerTextField(
         focus: _deviceFilterFocus,
         hintText: AppLocalizations.of(context)!.filter,
@@ -150,7 +150,7 @@ class _DeviceListViewState extends State<DeviceListView> {
               height: 30),
         ),
       ),
-      itemComparator: _deviceIDs.length > 1
+      itemComparator: deviceIDs.length > 1
           ? (item1, item2) {
               return item1.compareTo(item2);
             }
@@ -160,7 +160,7 @@ class _DeviceListViewState extends State<DeviceListView> {
       order: GroupedListOrder.ASC, // optional
     ));
 
-    if (filteredDevices.isEmpty && _deviceIDs.isNotEmpty) {
+    if (filteredDevices.isEmpty && deviceIDs.isNotEmpty) {
       items.add(Center(
         child: Text(
           AppLocalizations.of(context)!.noResults,
@@ -168,7 +168,7 @@ class _DeviceListViewState extends State<DeviceListView> {
         ),
       ));
     }
-    if (_deviceIDs.isEmpty) {
+    if (deviceIDs.isEmpty) {
       items.add(EmptyListWidget(
           infoText: AppLocalizations.of(context)!.thereAreNoDevices,
           buttonText: AppLocalizations.of(context)!.addNewDevice,

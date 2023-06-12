@@ -63,7 +63,7 @@ class _InstallerExpansionListTileState
               SizedBox(
                 width: (MediaQuery.of(context).size.width / 1.8),
                 child: Text(
-                  deviceName != null ? value + "\n" + deviceName : value,
+                  deviceName != null ? "$value\n$deviceName" : value,
                   style: InstallerTextStyles.logEventDetails
                       .copyWith(color: Colors.black),
                 ),
@@ -199,15 +199,6 @@ class _InstallerExpansionListTileState
           child: ClipRRect(
             borderRadius: BorderRadius.circular(10),
             child: ExpansionTile(
-                children: [
-                  const Divider(
-                    thickness: 1,
-                    color: InstallerColor.borderColor,
-                    indent: 10,
-                    endIndent: 10,
-                  ),
-                  _expandedChildren(),
-                ],
                 onExpansionChanged: (bool expanded) {
                   setState(() {
                     _tileExpanded = expanded;
@@ -265,7 +256,16 @@ class _InstallerExpansionListTileState
                     : InstallerIcons.createInstallerAssetImage(
                         assetPath: InstallerIcons.arrowDown,
                         width: 24,
-                        height: 24)),
+                        height: 24),
+                children: [
+                  const Divider(
+                    thickness: 1,
+                    color: InstallerColor.borderColor,
+                    indent: 10,
+                    endIndent: 10,
+                  ),
+                  _expandedChildren(),
+                ]),
           ),
         ),
       ),

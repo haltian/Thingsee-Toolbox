@@ -7,12 +7,12 @@ class GroupModel {
       {required String? environment,
       required Country? country,
       required String? name}) {
-    String _env = environment!.substring(0, 2);
-    String _countryCode = country!.countryCode.toLowerCase();
-    String _name = name!.toLowerCase();
-    String _fullName = _env + _countryCode + "00" + _name;
+    String env = environment!.substring(0, 2);
+    String countryCode = country!.countryCode.toLowerCase();
+    String name0 = name!.toLowerCase();
+    String fullName = "$env${countryCode}00$name0";
 
-    return _fullName;
+    return fullName;
   }
 
   List<String> environments(BuildContext context) {

@@ -76,17 +76,17 @@ class _GroupListViewState extends State<GroupListView> {
     }
   }
 
-  List<Widget> _groupList(List<Group> _groupList) {
+  List<Widget> _groupList(List<Group> groupList) {
     final List<Widget> items = [];
 
-    _groupList.sort(((a, b) =>
+    groupList.sort(((a, b) =>
         a.group_id.toLowerCase().compareTo(b.group_id.toLowerCase())));
     // Move 'unassigned' group to bottom of the list
     Group groupUnassigned = _groups.firstWhere(
         (element) => element.group_id == InstallerConstants.unassigned);
     _groups.remove(groupUnassigned);
     _groups.add(groupUnassigned);
-    var filteredList = _groupList
+    var filteredList = groupList
         .where((element) => element.group_id
             .toLowerCase()
             .contains(_filterTextController.text.toLowerCase()))
@@ -157,7 +157,7 @@ class _GroupListViewState extends State<GroupListView> {
 
   Future<void> _pullToRefresh() {
     _fetchGroupList();
-    return Future.delayed(Duration(seconds: 1), () {});
+    return Future.delayed(const Duration(seconds: 1), () {});
   }
 
   @override
@@ -288,7 +288,7 @@ class _GroupListViewState extends State<GroupListView> {
                     }
                   }),
             ],
-            leading: InstallerCloseButton(
+            leading: const InstallerCloseButton(
               icon: Icons.arrow_back_ios_new_rounded,
             ),
             elevation: 0,

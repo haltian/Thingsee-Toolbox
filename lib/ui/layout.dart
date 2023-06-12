@@ -13,7 +13,7 @@ class LayOut extends StatefulWidget {
   final Widget child;
   final GlobalKey<NavigatorState> navigatorKey;
   final ValueNotifier<bool?> bottomNavigationVisible;
-  LayOut(
+  const LayOut(
       {Key? key,
       required this.child,
       required this.navigatorKey,
@@ -30,7 +30,7 @@ class _LayOutState extends State<LayOut> {
   int newRoutesCount = -1;
   bool pushedNewRoute = false;
   final NavigationHistoryObserver historyObserver = NavigationHistoryObserver();
-  List<int> _selectedPages = [0];
+  final List<int> _selectedPages = [0];
   @override
   void initState() {
     historyCount = historyObserver.history.length;
@@ -85,7 +85,7 @@ class _LayOutState extends State<LayOut> {
   }
 
   void _wait() async {
-    await Future.delayed(Duration(milliseconds: 50)).then((value) {
+    await Future.delayed(const Duration(milliseconds: 50)).then((value) {
       setState(() {
         pushedNewRoute = false;
       });
@@ -103,15 +103,15 @@ class _LayOutState extends State<LayOut> {
     }
   }
 
-  void _popPreviousPages(int _index, String route, [Object? arguments]) {
+  void _popPreviousPages(int index, String route, [Object? arguments]) {
     setState(() {
       pushedNewRoute = true;
     });
     _popNewRoutes();
-    if (_index != 0 && _selectedPages.length > 1) {
+    if (index != 0 && _selectedPages.length > 1) {
       widget.navigatorKey.currentState!
           .pushReplacementNamed(route, arguments: arguments);
-    } else if (_index != 0 && _selectedPages.length <= 1) {
+    } else if (index != 0 && _selectedPages.length <= 1) {
       widget.navigatorKey.currentState!.pushNamed(route, arguments: arguments);
     } else {
       _selectedPages.clear();
@@ -247,7 +247,7 @@ class _LayOutState extends State<LayOut> {
                             child: AnimatedContainer(
                               height: model.getDimmed() == true ? 98 : 0,
                               color: Colors.black.withOpacity(0.7),
-                              duration: Duration(milliseconds: 10),
+                              duration: const Duration(milliseconds: 10),
                             ),
                           ),
                         ),

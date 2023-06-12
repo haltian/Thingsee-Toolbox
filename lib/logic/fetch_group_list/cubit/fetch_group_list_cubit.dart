@@ -22,7 +22,7 @@ class FetchGroupListCubit extends Cubit<FetchGroupListState> {
   Future<void> fetchGroupList({required StackIdentifier stack}) async {
     emit(const FetchGroupListInProgress());
     try {
-      var groupList;
+      List<Group> groupList;
       String? token;
       token = await InstallerUserRepository().getToken();
       if (token == null) {

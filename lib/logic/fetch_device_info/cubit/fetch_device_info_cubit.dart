@@ -23,7 +23,7 @@ class FetchDeviceInfoCubit extends Cubit<FetchDeviceInfoState> {
       {required StackIdentifier stack, required String deviceID}) async {
     emit(const FetchDeviceInfoInProgress());
     try {
-      var deviceInfo;
+      DeviceInfo deviceInfo;
       String? token;
       token = await InstallerUserRepository().getToken();
       if (token == null) {

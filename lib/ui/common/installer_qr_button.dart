@@ -40,11 +40,11 @@ class _InstallerQrButtonState extends State<InstallerQrButton> {
           child: Container(
             margin: const EdgeInsets.all(15),
             child: widget.loading
-                ? Center(
+                ? const Center(
                     child: SizedBox(
                       height: 25,
                       width: 25,
-                      child: const CircularProgressIndicator(
+                      child: CircularProgressIndicator(
                         color: Colors.white,
                       ),
                     ),

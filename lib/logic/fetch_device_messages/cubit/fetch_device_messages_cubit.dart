@@ -27,7 +27,7 @@ class FetchDeviceMessagesCubit extends Cubit<FetchDeviceMessagesState> {
       required int limit}) async {
     emit(const FetchDeviceMessagesInProgress());
     try {
-      var messageList;
+      List<DeviceMessages> messageList;
       String? token;
       token = await InstallerUserRepository().getToken();
       if (token == null) {
@@ -73,7 +73,7 @@ class FetchDeviceMessagesCubit extends Cubit<FetchDeviceMessagesState> {
         emit(const FetchDeviceMessagesFailed());
       }
     } catch (exception) {
-      print("e: " + exception.toString());
+      print("e: $exception");
 
       final errorModel = InstallerErrorModel(
           ErrorMessage(null, exception.toString(), ""),

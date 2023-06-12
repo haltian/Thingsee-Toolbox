@@ -25,7 +25,7 @@ class EditGroupCubit extends Cubit<EditGroupState> {
       required String newGroupId}) async {
     emit(const EditGroupInProgress());
     try {
-      var editedGroup;
+      Group editedGroup;
       String? token;
       token = await InstallerUserRepository().getToken();
       if (token == null) {

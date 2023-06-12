@@ -23,7 +23,7 @@ class FetchDeviceListCubit extends Cubit<FetchDeviceListState> {
       {required StackIdentifier stack, required String groupId}) async {
     emit(const FetchDeviceListInProgress());
     try {
-      var devices;
+      DeviceListResponse devices;
       String? token;
       token = await InstallerUserRepository().getToken();
       if (token == null) {
@@ -66,7 +66,7 @@ class FetchDeviceListCubit extends Cubit<FetchDeviceListState> {
         emit(const FetchDeviceListFailed());
       }
     } catch (exception) {
-      print("e: " + exception.toString());
+      print("e: $exception");
 
       final errorModel = InstallerErrorModel(
           ErrorMessage(null, exception.toString(), ""),

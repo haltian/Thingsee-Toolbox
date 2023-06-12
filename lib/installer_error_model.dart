@@ -120,14 +120,9 @@ class ContentError implements Exception {
   const ContentError(this.errorMessage);
   @override
   String toString() =>
-      'Message: ' +
-      (errorMessage!.message == null ? 'no message' : errorMessage!.message!) +
-      ' code: ' +
-      (errorMessage!.statusCode == null
+      'Message: ${errorMessage!.message == null ? 'no message' : errorMessage!.message!} code: ${errorMessage!.statusCode == null
           ? 'no code'
-          : errorMessage!.statusCode.toString()) +
-      ' body: ' +
-      (errorMessage!.error == null
+          : errorMessage!.statusCode.toString()} body: ${errorMessage!.error == null
           ? 'no error'
-          : errorMessage!.error.toString());
+          : errorMessage!.error.toString()}';
 }

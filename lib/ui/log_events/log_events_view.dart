@@ -82,7 +82,7 @@ class _LogEventsViewState extends State<LogEventsView> {
       rows.add(["Group ID", widget.logFile.groupId]);
       rows.add([
         "Created",
-        _formatDate(DateTime.now().toUtc(), 'yyyy-MM-dd HH:mm:ss') + " (UTC)"
+        "${_formatDate(DateTime.now().toUtc(), 'yyyy-MM-dd HH:mm:ss')} (UTC)"
       ]);
       rows.add([]);
       row.add("Type");
@@ -160,8 +160,7 @@ class _LogEventsViewState extends State<LogEventsView> {
         }
         row.add(logEvents[i].note ?? "null");
         row.add(
-            _formatDate(logEvents[i].timeStamp.toUtc(), 'yyyy-MM-dd HH:mm:ss') +
-                " (UTC)");
+            "${_formatDate(logEvents[i].timeStamp.toUtc(), 'yyyy-MM-dd HH:mm:ss')} (UTC)");
         row.add(logEvents[i].version);
 
         rows.add(row);
@@ -177,8 +176,7 @@ class _LogEventsViewState extends State<LogEventsView> {
         dir = (await getApplicationDocumentsDirectory()).path;
       }
 
-      File f = File(dir +
-          "/${_currentLogFile!.title}_${_formatDate(DateTime.now(), 'yyyy-MM-dd')}.csv");
+      File f = File("$dir/${_currentLogFile!.title}_${_formatDate(DateTime.now(), 'yyyy-MM-dd')}.csv");
 
       f.writeAsString(csv).then((value) => share(f));
     } catch (e) {
@@ -275,13 +273,13 @@ class _LogEventsViewState extends State<LogEventsView> {
           Container(
             width: 15,
             height: 15,
+            decoration:
+                const BoxDecoration(shape: BoxShape.circle, color: Colors.white),
             child: const Icon(
               Icons.circle,
               color: InstallerColor.recordIconColor,
               size: 13,
             ),
-            decoration:
-                BoxDecoration(shape: BoxShape.circle, color: Colors.white),
           ),
           const SizedBox(width: 7),
           Text(AppLocalizations.of(context)!.recordingOn,
@@ -418,7 +416,7 @@ class _LogEventsViewState extends State<LogEventsView> {
                     }
                   }),
             ],
-            leading: InstallerCloseButton(
+            leading: const InstallerCloseButton(
               icon: Icons.arrow_back_ios_new_rounded,
             ),
             elevation: 0,

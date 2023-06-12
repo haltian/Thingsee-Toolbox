@@ -22,7 +22,7 @@ class FetchGroupCubit extends Cubit<FetchGroupState> {
       {required StackIdentifier stack, required String deviceID}) async {
     emit(const FetchGroupInProgress());
     try {
-      var groupID;
+      DeviceGroup groupID;
       String? token;
       token = await InstallerUserRepository().getToken();
       if (token == null) {

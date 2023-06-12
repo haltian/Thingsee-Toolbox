@@ -24,7 +24,7 @@ class FetchInstallationStatusCubit extends Cubit<FetchInstallationStatusState> {
       {required StackIdentifier stack, required String deviceID}) async {
     emit(const FetchInstallationStatusInProgress());
     try {
-      var installationStatus;
+      List<InstallationStatus> installationStatus;
       String? token;
       token = await InstallerUserRepository().getToken();
       if (token == null) {

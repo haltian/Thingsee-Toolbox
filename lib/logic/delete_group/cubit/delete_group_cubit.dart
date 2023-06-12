@@ -35,7 +35,7 @@ class DeleteGroupCubit extends Cubit<DeleteGroupState> {
       required List<String> devicesinGroup}) async {
     emit(const DeleteGroupInProgress());
     try {
-      var deletedGroup;
+      Group deletedGroup;
       String? token;
       token = await InstallerUserRepository().getToken();
       if (token == null) {
