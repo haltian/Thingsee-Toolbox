@@ -43,12 +43,12 @@ class _AddLogViewState extends State<AddOrEditLogView> {
   bool _loading = true;
   String? _selectedGroupId;
   List<Group> _groups = [];
-  List<String> _groupIds = [];
+  final List<String> _groupIds = [];
   StackIdentifier? _activeStack;
   InstallationModel? installationModel;
   final ValueNotifier<String?> groupIdNotifier = ValueNotifier<String?>(null);
   bool _anyFieldChanged = false;
-  List<IncudedEvent> _oldIncludedEvents = [];
+  final List<IncudedEvent> _oldIncludedEvents = [];
 
   @override
   void initState() {

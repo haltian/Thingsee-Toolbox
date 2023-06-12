@@ -123,7 +123,7 @@ class InstallerApp extends StatelessWidget {
   }
 
   Route<dynamic> _generateLicensesRoute(RouteSettings settings) {
-    return MaterialPageRoute(builder: ((context) => customLicenses()));
+    return MaterialPageRoute(builder: ((context) => const customLicenses()));
   }
 
   Route<dynamic> _generateQrCodeViewRoute(RouteSettings settings) {

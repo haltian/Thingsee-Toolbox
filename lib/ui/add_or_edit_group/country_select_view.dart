@@ -121,9 +121,7 @@ class _CountryPickerSheetState extends State<CountrySelectView> {
                                   ? Colors.blue
                                   : Colors.transparent),
                           title: Text(
-                            filteredList[index].countryCode +
-                                " - " +
-                                filteredList[index].name,
+                            "${filteredList[index].countryCode} - ${filteredList[index].name}",
                             style: InstallerTextStyles.dropDownText,
                           ));
                     }),

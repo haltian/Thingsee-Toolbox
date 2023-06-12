@@ -26,7 +26,7 @@ class CreateGroupCubit extends Cubit<CreateGroupState> {
       required String? description}) async {
     emit(const CreateGroupInProgress());
     try {
-      var newGroup;
+      Group newGroup;
       String? token;
       token = await InstallerUserRepository().getToken();
       if (token == null) {

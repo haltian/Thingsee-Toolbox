@@ -308,17 +308,17 @@ class DeviceModel {
       return true;
     }
     // Normal threshol is 2 hours or 7200000 milliseconds
-    int _onlineThreshold = 7200000;
+    int onlineThreshold = 7200000;
 
     // Gateway threshold is 6 hours or 21600000 milliseconds
     if (sensorType == ThingseeSensorType.gatewayGlobal ||
         sensorType == ThingseeSensorType.gatewayLan) {
-      _onlineThreshold = _onlineThreshold * 3;
+      onlineThreshold = onlineThreshold * 3;
     }
     // unix to mS
     timestamp = timestamp * 1000;
-    int _now = DateTime.now().millisecondsSinceEpoch;
-    return ((_now - timestamp) >= _onlineThreshold);
+    int now = DateTime.now().millisecondsSinceEpoch;
+    return ((now - timestamp) >= onlineThreshold);
   }
 
   String formatTime(int? timestamp, BuildContext context) {
@@ -352,17 +352,18 @@ class DeviceModel {
     if (batteryLevel == null) {
       return AppLocalizations.of(context)!.noBattery;
     } else {
-      return batteryLevel.toString() + "%";
+      return "$batteryLevel%";
     }
   }
 
-  String batteryStatus(DeviceModel _deviceModel, BuildContext context,
+  String batteryStatus(DeviceModel deviceModel, BuildContext context,
       ThingseeSensorType sensorType, DeviceInfo info) {
     if (sensorType == ThingseeSensorType.gatewayGlobal ||
         sensorType == ThingseeSensorType.gatewayLan ||
         sensorType == ThingseeSensorType.count) {
       return AppLocalizations.of(context)!.usbPowered;
-    } else
+    } else {
       return batteryLevel(info.battery_level, context);
+    }
   }
 }

@@ -64,7 +64,7 @@ class _LogListViewState extends State<LogListView> {
                             assetPath: InstallerIcons.savedLog,
                             width: 32,
                             height: 32),
-                    title: logs[i].title.toString() + " | " + logs[i].groupId,
+                    title: "${logs[i].title} | ${logs[i].groupId}",
                     description: logs[i].description,
                     onPressed: () {
                       Navigator.of(context)
@@ -89,7 +89,7 @@ class _LogListViewState extends State<LogListView> {
             });
       }
     }
-    return Center(child: CircularProgressIndicator());
+    return const Center(child: CircularProgressIndicator());
   }
 
   @override

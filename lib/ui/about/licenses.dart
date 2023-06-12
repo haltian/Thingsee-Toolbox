@@ -14,13 +14,13 @@ class _customLicensesState extends State<customLicenses> {
     return Scaffold(
         body: Theme(
       data: Theme.of(context).copyWith(
-        textTheme: TextTheme(
-            headline5: InstallerTextStyles.headLine,
-            bodyText2: InstallerTextStyles.bodyText,
-            headline6: InstallerTextStyles.headLine,
-            subtitle1: InstallerTextStyles.bodyText),
+        textTheme: const TextTheme(
+            headlineSmall: InstallerTextStyles.headLine,
+            bodyMedium: InstallerTextStyles.bodyText,
+            titleLarge: InstallerTextStyles.headLine,
+            titleMedium: InstallerTextStyles.bodyText),
       ),
-      child: LicensePage(),
+      child: const LicensePage(),
     ));
   }
 }

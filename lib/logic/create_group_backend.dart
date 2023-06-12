@@ -31,7 +31,7 @@ class CreateGroupBackend {
       }),
     );
 
-    String source = Utf8Decoder().convert(response.bodyBytes);
+    String source = const Utf8Decoder().convert(response.bodyBytes);
 
     HTTPError.checkHTTPStatusCode(response, response.body);
 

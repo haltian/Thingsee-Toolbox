@@ -13,19 +13,19 @@ import 'test_stack_cubit_unit_test.mocks.dart';
 @GenerateMocks([http.Client])
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
-  const _clientId = "testerClientId";
-  const _clientSecret = "testerClientSecret";
-  const _URL =
+  const clientId = "testerClientId";
+  const clientSecret = "testerClientSecret";
+  const URL =
       "https://4zbezvcgi1.execute-api.eu-west-1.amazonaws.com/prod/v1/";
 
   Uri url() {
-    return Uri.parse(_URL + InstallerConstants.authURL);
+    return Uri.parse(URL + InstallerConstants.authURL);
   }
 
   String body() {
     return jsonEncode(<String, dynamic>{
-      InstallerConstants.clientID: _clientId,
-      InstallerConstants.clientSecret: _clientSecret
+      InstallerConstants.clientID: clientId,
+      InstallerConstants.clientSecret: clientSecret
     });
   }
 
@@ -42,7 +42,7 @@ void main() {
       build: () => TestStackCubit(
           TestStackBackend(validClient), UnitTestUtils.errorNotifier()),
       act: (cubit) => cubit.testStack(
-          url: _URL, clientId: _clientId, secret: _clientSecret),
+          url: URL, clientId: clientId, secret: clientSecret),
       wait: UnitTestUtils.testDefaultDuration,
       expect: () => [const TestStackInProgress(), isA<TestStackSuccess>()],
     );
@@ -58,7 +58,7 @@ void main() {
       build: () => TestStackCubit(
           TestStackBackend(errorClient), UnitTestUtils.errorNotifier()),
       act: (cubit) => cubit.testStack(
-          url: _URL, clientId: _clientId, secret: _clientSecret),
+          url: URL, clientId: clientId, secret: clientSecret),
       wait: UnitTestUtils.testDefaultDuration,
       expect: () => [const TestStackInProgress(), isA<TestStackFailed>()],
     );

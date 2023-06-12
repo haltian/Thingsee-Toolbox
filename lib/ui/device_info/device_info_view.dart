@@ -524,7 +524,7 @@ class _DeviceViewState extends State<DeviceView> {
                     }
                   }),
             ],
-            leading: InstallerCloseButton(
+            leading: const InstallerCloseButton(
               icon: Icons.arrow_back_ios_new_rounded,
             ),
             elevation: 0,

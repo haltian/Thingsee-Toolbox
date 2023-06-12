@@ -228,7 +228,7 @@ class _AddStackViewState extends State<AddStackView> {
             resizeToAvoidBottomInset: false,
             appBar: AppBar(
               automaticallyImplyLeading: false,
-              actions: [
+              actions: const [
                 InstallerCloseButton(
                   icon: Icons.close_rounded,
                 ),

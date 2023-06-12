@@ -201,9 +201,7 @@ class _AddOrEditGroupViewState extends State<AddOrEditGroupView> {
             iconVisible: false,
             title: AppLocalizations.of(context)!.country,
             hintText: _selectedCountry != null
-                ? ((_selectedCountry!.countryCode).toLowerCase() +
-                    " - " +
-                    _selectedCountry!.name)
+                ? ("${(_selectedCountry!.countryCode).toLowerCase()} - ${_selectedCountry!.name}")
                 : AppLocalizations.of(context)!.selectCountry,
             items: const [],
             onChanged: (_) {},
@@ -390,7 +388,7 @@ class _AddOrEditGroupViewState extends State<AddOrEditGroupView> {
             resizeToAvoidBottomInset: false,
             appBar: AppBar(
               automaticallyImplyLeading: false,
-              actions: [
+              actions: const [
                 InstallerCloseButton(
                   icon: Icons.close_rounded,
                 ),

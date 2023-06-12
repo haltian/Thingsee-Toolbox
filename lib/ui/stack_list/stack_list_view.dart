@@ -65,6 +65,9 @@ class _StackListViewState extends State<StackListView> {
           await widget.userRepository.setActiveStack(stack);
           //Navigate to groups view and set nav bar visible. When returning to view hide nav bar
           widget.bottomNavigationVisible.value = true;
+          if (!mounted) {
+            return;
+          }
           Navigator.of(context)
               .pushNamed(InstallerRoutes.groupListViewRoute, arguments: stack)
               .then((value) => widget.bottomNavigationVisible.value = false);

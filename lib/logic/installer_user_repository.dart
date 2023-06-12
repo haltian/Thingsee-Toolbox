@@ -19,7 +19,7 @@ class InstallerUserRepository extends ChangeNotifier {
   Future<void> createLogEvent(LogEvent logEvent) async {
     final id = await getNewID("logEvents");
     _logEvents = (await getSavedLogEventsForId(logEvent.logId, true))!;
-    final _newLogEvent = LogEvent(
+    final newLogEvent = LogEvent(
         id!,
         logEvent.logId,
         logEvent.event,
@@ -36,7 +36,7 @@ class InstallerUserRepository extends ChangeNotifier {
         logEvent.newGroupId,
         logEvent.version,
         logEvent.measurementInterval);
-    _logEvents.add(_newLogEvent);
+    _logEvents.add(newLogEvent);
 
     await _storage.write(
         key: "logEvents", value: jsonEncode(_logEvents).toString());
@@ -63,8 +63,8 @@ class InstallerUserRepository extends ChangeNotifier {
 
   Future<List<LogEvent>?> getSavedLogEventsForId(int? logFileId,
       [bool returnAll = false]) async {
-    String? _events = await _storage.read(key: "logEvents");
-    final logEvents = jsonDecode(_events.toString());
+    String? events = await _storage.read(key: "logEvents");
+    final logEvents = jsonDecode(events.toString());
     if (logEvents != null) {
       _logEvents =
           List<LogEvent>.from(logEvents.map((l) => LogEvent.fromJson(l)));
@@ -79,7 +79,7 @@ class InstallerUserRepository extends ChangeNotifier {
   Future<void> createLogFile(LogFile logFile) async {
     final id = await getNewID("logFiles");
 
-    final _newLogFile = LogFile(
+    final newLogFile = LogFile(
         id,
         logFile.stack,
         logFile.title,
@@ -88,7 +88,7 @@ class InstallerUserRepository extends ChangeNotifier {
         logFile.recording,
         logFile.groupId,
         logFile.includedEvents);
-    _logfiles.add(_newLogFile);
+    _logfiles.add(newLogFile);
 
     await _storage.write(
         key: "logFiles", value: jsonEncode(_logfiles).toString());
@@ -129,9 +129,9 @@ class InstallerUserRepository extends ChangeNotifier {
   }
 
   Future<List<LogFile>?> getSavedLogFiles() async {
-    String? _logsString = await _storage.read(key: "logFiles");
-    StackIdentifier? _activeStack = await getActiveStack();
-    final logfiles = jsonDecode(_logsString.toString());
+    String? logsString = await _storage.read(key: "logFiles");
+    StackIdentifier? activeStack = await getActiveStack();
+    final logfiles = jsonDecode(logsString.toString());
     if (logfiles != null) {
       _logfiles = List<LogFile>.from(logfiles.map((l) => LogFile.fromJson(l)));
     } else {
@@ -140,16 +140,16 @@ class InstallerUserRepository extends ChangeNotifier {
 
     _logfiles = _logfiles
         .where((element) =>
-            element.stack.id == _activeStack!.id &&
-            element.stack.name == _activeStack.name)
+            element.stack.id == activeStack!.id &&
+            element.stack.name == activeStack.name)
         .toList();
 
     return _logfiles;
   }
 
   Future<LogFile> getCurrentLogFile(int logId) async {
-    String? _savedLogs = await _storage.read(key: "logFiles");
-    final logfiles = jsonDecode(_savedLogs.toString());
+    String? savedLogs = await _storage.read(key: "logFiles");
+    final logfiles = jsonDecode(savedLogs.toString());
     if (logfiles != null) {
       _logfiles = List<LogFile>.from(logfiles.map((l) => LogFile.fromJson(l)));
     } else {
@@ -160,9 +160,9 @@ class InstallerUserRepository extends ChangeNotifier {
 
   Future<void> saveStack(StackIdentifier stack) async {
     final id = await getNewID("stackList");
-    final _stackToAdd = StackIdentifier(
+    final stackToAdd = StackIdentifier(
         id, stack.name, stack.clientId, stack.apiURL, stack.secret);
-    _stackList.add(_stackToAdd);
+    _stackList.add(stackToAdd);
 
     await _storage.write(
         key: "stackList", value: jsonEncode(_stackList).toString());
@@ -213,8 +213,8 @@ class InstallerUserRepository extends ChangeNotifier {
   }
 
   Future<List<StackIdentifier>?> getSavedStacks() async {
-    String? _stacksString = await _storage.read(key: "stackList");
-    final stacks = jsonDecode(_stacksString.toString());
+    String? stacksString = await _storage.read(key: "stackList");
+    final stacks = jsonDecode(stacksString.toString());
     if (stacks != null) {
       _stackList = List<StackIdentifier>.from(
           stacks.map((s) => StackIdentifier.fromJson(s)));
@@ -228,8 +228,8 @@ class InstallerUserRepository extends ChangeNotifier {
   Future<int?> getNewID(String key) async {
     int newId;
     List<Object> objectList = [];
-    String? _fileString = await _storage.read(key: key);
-    final object = jsonDecode(_fileString.toString());
+    String? fileString = await _storage.read(key: key);
+    final object = jsonDecode(fileString.toString());
     if (object != null) {
       if (key == "stackList") {
         objectList = List<StackIdentifier>.from(

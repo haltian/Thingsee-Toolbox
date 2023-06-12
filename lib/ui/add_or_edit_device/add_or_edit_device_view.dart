@@ -53,9 +53,9 @@ class _AddOrEditDeviceViewState extends State<AddOrEditDeviceView> {
   bool _groupsLoading = false;
   bool _commandsLoading = false;
   bool _deviceInfoLoading = false;
-  List<String> _groupIds = [];
+  final List<String> _groupIds = [];
   List<Group> _groups = [];
-  List<DeviceCommand> _givenCommands = [];
+  final List<DeviceCommand> _givenCommands = [];
   bool _updatingValues = false;
   bool _hasLogFile = false;
   final TextEditingController _installationNotesController =
@@ -250,17 +250,15 @@ class _AddOrEditDeviceViewState extends State<AddOrEditDeviceView> {
     });
   }
 
-  void _setNotesText(List<LogEvent>? _events) {
+  void _setNotesText(List<LogEvent>? events) {
     setState(() {
-      List<LogEvent> _logEventsForTheDevice = [];
-      if (_events != null && _events.isNotEmpty) {
+      List<LogEvent> logEventsForTheDevice = [];
+      if (events != null && events.isNotEmpty) {
         try {
-          _logEventsForTheDevice = _events
+          logEventsForTheDevice = events
               .where((element) => element.deviceId == _selectedDeviceID)
               .toList();
-          _givenNotes = _logEventsForTheDevice.last.note != null
-              ? _logEventsForTheDevice.last.note
-              : null;
+          _givenNotes = logEventsForTheDevice.last.note;
           if (_givenNotes != null) {
             _installationNotesController.text = _givenNotes.toString();
           }
@@ -520,13 +518,13 @@ class _AddOrEditDeviceViewState extends State<AddOrEditDeviceView> {
   }
 
   String _formatTUID() {
-    String _value = AppLocalizations.of(context)!.readQrCode;
+    String value = AppLocalizations.of(context)!.readQrCode;
     if (_originalDeviceId != null) {
-      _value = _originalDeviceId.toString();
+      value = _originalDeviceId.toString();
     } else if (_selectedDeviceID != null) {
-      _value = _selectedDeviceID.toString();
+      value = _selectedDeviceID.toString();
     }
-    return _value;
+    return value;
   }
 
   String _getDeviceId() {
@@ -615,7 +613,7 @@ class _AddOrEditDeviceViewState extends State<AddOrEditDeviceView> {
           // Replace page new tuid
           if (_isReplacePage())
             Padding(
-              padding: EdgeInsets.only(left: 27, right: 27, top: 10),
+              padding: const EdgeInsets.only(left: 27, right: 27, top: 10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.end,
@@ -1250,7 +1248,7 @@ class _AddOrEditDeviceViewState extends State<AddOrEditDeviceView> {
             resizeToAvoidBottomInset: false,
             appBar: AppBar(
               automaticallyImplyLeading: false,
-              actions: [
+              actions: const [
                 InstallerCloseButton(
                   icon: Icons.close_rounded,
                 ),
