@@ -1,4 +1,4 @@
-# Thingsee-installer-mobile
+# Thingsee Toolbox
 
 ## To generate JSON factory classes
 
